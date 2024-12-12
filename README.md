@@ -1,8 +1,31 @@
-# React + Vite
+# Quiz Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React-based quiz game that fetches questions from the [OpenTDB API](https://opentdb.com/). This game allows users to answer multiple-choice questions on various topics and provides instant feedback on whether their answers were correct or not.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Fetches trivia questions from the OpenTDB API
+- Multiple choice answers for each question
+- Real-time feedback on the user's answers
+- Tracks the user's score throughout the game
+- Displays results at the end of the quiz
+
+## Technologies Used
+
+- React
+- OpenTDB API
+- JavaScript
+- CSS (or styled-components)
+
+## Setup Instructions
+
+### Prerequisites
+
+Make sure you have [Node.js](https://nodejs.org/) and [npm](https://npmjs.com/) installed on your system.
+
+### Clone the repository
+
+```bash
+git clone https://github.com/your-username/quiz-game.git
+cd quiz-game
+```
