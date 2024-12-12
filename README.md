@@ -6,16 +6,15 @@ A React-based quiz game that fetches questions from the [OpenTDB API](https://op
 
 - Fetches trivia questions from the OpenTDB API
 - Multiple choice answers for each question
-- Real-time feedback on the user's answers
+- Maintains a timer throughout the game
 - Tracks the user's score throughout the game
 - Displays results at the end of the quiz
 
 ## Technologies Used
 
-- React
 - OpenTDB API
-- JavaScript
-- CSS (or styled-components)
+- React
+- Tailwind CSS
 
 ## Setup Instructions
 
