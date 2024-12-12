@@ -1,4 +1,4 @@
-# Quiz Game
+# Kwizz
 
 A React-based quiz game that fetches questions from the [OpenTDB API](https://opentdb.com/). This game allows users to answer multiple-choice questions on various topics and provides instant feedback on whether their answers were correct or not.
 
@@ -25,6 +25,6 @@ Make sure you have [Node.js](https://nodejs.org/) and [npm](https://npmjs.com/) 
 ### Clone the repository
 
 ```bash
-git clone https://github.com/your-username/quiz-game.git
-cd quiz-game
+git clone https://github.com/shreynagda/kwizz-react.git
+cd kwizz-react
 ```
