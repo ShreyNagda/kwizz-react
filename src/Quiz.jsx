@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { decode } from "html-entities";
 
 import Loading from "./Components/Loading";
@@ -17,6 +17,7 @@ const Quiz = () => {
   const [time, setTime] = useState(0);
   const [playable, setPlayable] = useState(false);
   let interval;
+  const navigate = useNavigate();
 
   //Timer using Interval
   useEffect(() => {
@@ -88,6 +89,10 @@ const Quiz = () => {
     }, 2000);
   }
 
+  function home() {
+    navigate("/");
+  }
+
   if (loading) {
     return <Loading />;
   }
@@ -102,13 +107,22 @@ const Quiz = () => {
             <div key={index}>{item}</div>
           ))}
         </div>
-        <button
-          type="button"
-          className="mt-5 bg-red-50 px-10 py-3 rounded-sm"
-          onClick={replay}
-        >
-          Replay
-        </button>
+        <div className="flex gap-2">
+          <button
+            type="button"
+            className="mt-5 bg-red-50 px-10 py-3 rounded-sm"
+            onClick={replay}
+          >
+            Replay
+          </button>
+          <button
+            type="button"
+            className="mt-5 bg-red-50 px-10 py-3 rounded-sm"
+            onClick={home}
+          >
+            Home
+          </button>
+        </div>
       </div>
     );
   }
