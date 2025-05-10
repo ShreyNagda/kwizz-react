@@ -2,11 +2,12 @@ import React from "react";
 
 const Loading = () => {
   return (
-    <div className="min-h-screen w-full flex flex-col justify-center items-center">
+    <div className="min-h-screen w-full flex flex-col justify-center items-center text-white">
       <div>Loading</div>
       <svg
         aria-hidden="true"
-        className="inline w-10 h-10 white animate-spin dark:white fill-blue-600"
+        className="inline w-10 h-10 white animate-spin dark:white fill-blue-600
+        "
         viewBox="0 0 100 101"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

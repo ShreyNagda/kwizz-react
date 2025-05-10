@@ -10,8 +10,8 @@ const NumberPicker = ({ number, setter }) => {
   };
   return (
     <div>
-      <div className="text-gray-400 px-3">Select Number of Questions</div>
-      <div className="flex justify-between px-4 py-2 text-gray-500 border rounded-sm">
+      <div className="text-white pr-3">Select Number of Questions</div>
+      <div className="flex justify-between px-4 py-2 text-white border rounded-lg">
         <button type="button" onClick={decrement}>
           <FaMinus />
         </button>

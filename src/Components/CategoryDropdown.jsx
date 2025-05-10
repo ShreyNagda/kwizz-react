@@ -24,21 +24,23 @@ const CategoryDropdown = ({ setter, category }) => {
   return (
     <>
       <div className="text-center flex flex-col items-center justify-center cursor-pointer relative mx-auto w-full rounded-sm">
-        <div className="text-left w-full text-gray-400 px-3">
+        <div className="text-left w-full text-white pr-3">
           Select Category
         </div>
         <button
           type="button"
-          className="text-slate-500 cursor-pointer flex justify-between w-full p-3 rounded-sm border-slate-200 border"
+          className={`text-white cursor-pointer flex justify-between w-full p-3 border border-b ${showList ? "rounded-t-lg border-b-0 shadow-md" : "rounded-lg"}`}
           onClick={onClick}
         >
           <div className="text-ellipsis overflow-hidden whitespace-nowrap">
             {category.name}
           </div>
+          <div className="flex items-center justify-center">
           {showList ? <FaTimes /> : <FaCaretDown />}
+          </div>
         </button>
         {showList && (
-          <ul className="absolute top-[75px] max-h-48 overflow-y-auto w-full z-10 bg-white">
+          <ul className="absolute top-[75px] max-h-36 overflow-y-auto w-full z-10 bg-[#23232c] rounded-b-lg">
             {data &&
               data.map((_category) => (
                 <li
@@ -47,7 +49,7 @@ const CategoryDropdown = ({ setter, category }) => {
                     setter(_category);
                     setShowList(false);
                   }}
-                  className="text-left m-2 bg-slate-100 text-gray-500 px-1 py-2 rounded-sm"
+                  className="text-left text-white px-1 py-2"
                 >
                   {_category.name}
                 </li>

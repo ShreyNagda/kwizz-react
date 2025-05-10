@@ -19,21 +19,20 @@ const Home = () => {
     navigate("/quiz", { state: { url }, replace: true });
   }
   return (
-    <div className="w-[90%] md:w-80 mx-auto flex flex-col gap-4">
+    <div className="w-[90%] md:w-80 mx-auto min-h-svh flex flex-col justify-between py-4">
       <Header />
+      <div className="flex flex-col gap-5">
       <CategoryDropdown setter={(c) => setCategory(c)} category={category} />
       <NumberPicker number={numberOfQuestions} setter={setNumberOfQuestions} />
       <DifficultySelect difficulty={difficulty} setter={setDifficulty} />
+      </div>
       <button
         type="button"
-        className="bg-slate-200 text-slate-500 px-4 py-2 rounded-sm cursor-pointer"
+        className="bg-slate-200 text-[#23232c] px-4 py-2 rounded-full cursor-pointer"
         onClick={StartQuiz}
       >
         Start Quiz
       </button>
-      <footer className="absolute bottom-0 left-0 bg-slate-800 text-center text-slate-400 w-full p-2">
-        By Shrey Nagda
-      </footer>
     </div>
   );
 };
